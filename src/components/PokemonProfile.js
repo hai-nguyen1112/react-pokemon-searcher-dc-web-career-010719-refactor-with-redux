@@ -5,10 +5,6 @@ import {Card, Image, Button} from 'semantic-ui-react'
 import {isEmpty} from 'lodash'
 
 const PokemonProfile = ({pokemon}) => {
-  let stats
-  if (!isEmpty(pokemon) && !isEmpty(pokemon.stats[0])) {
-    stats = pokemon.stats.map(stat => <span key={stat.name}>{stat.name.charAt(0).toUpperCase() + stat.name.slice(1)}: {stat.value} <br /></span>)
-  }
   return (
     <div id="pokemon-profile-page">
       {
@@ -30,7 +26,13 @@ const PokemonProfile = ({pokemon}) => {
                                                                         })}</span>
             </Card.Meta>
             <Card.Description>
-              {stats}
+              {
+                !isEmpty(pokemon.stats[0])
+                ?
+                pokemon.stats.map(stat => <span key={stat.name}>{stat.name.charAt(0).toUpperCase() + stat.name.slice(1)}: {stat.value} <br /></span>)
+                :
+                null
+              }
               <br />
               <Link to="/pokemons"><Button>Back</Button></Link>
             </Card.Description>
