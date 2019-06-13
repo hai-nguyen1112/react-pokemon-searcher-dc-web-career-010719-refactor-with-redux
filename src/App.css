@@ -21,3 +21,10 @@
 .App-intro {
   font-size: large;
 }
+
+#pokemon-profile-page {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

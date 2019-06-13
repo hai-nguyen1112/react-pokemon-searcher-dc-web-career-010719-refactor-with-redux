@@ -13,8 +13,7 @@ class PokemonPage extends React.Component {
     return (
       <div>
         <h1>Pokemon Searcher</h1>
-        <br />
-        <Search onSearchChange={_.debounce(() => this.props.onSearchTermChange(document.querySelectorAll("input")[0].value), 500)} showNoResults={false} />
+        <Search onSearchChange={_.debounce(() => this.props.onSearchTermChange(document.querySelectorAll("input")[0].value), 500)} showNoResults={false} placeholder="Search By Name..."/>
         <br />
         <PokemonSort />
         <br />
