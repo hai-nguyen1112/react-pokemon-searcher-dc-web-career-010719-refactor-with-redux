@@ -70,21 +70,55 @@ function changedFilterValue(value) {
   }
 }
 
+function voteForPokemonWithThunk(pokemon) {
+  return dispatch => {
+    fetch(`http://localhost:3000/pokemon/${pokemon.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        height: pokemon.height + 1
+      })
+    }).then(res => res.json())
+      .then(pokemon => {
+        dispatch(votedForPokemonWithThunk(pokemon))
+      })
+  }
+}
+
 function votedForPokemonWithThunk(pokemon) {
-  fetch(`http://localhost:3000/pokemon/${pokemon.id}`, {
-    method: "PATCH",
-    headers: {
-      "Content-Type": "application/json",
-      "Accept": "application/json"
-    },
-    body: JSON.stringify({
-      height: pokemon.height + 1
-    })
-  })
   return {
     type: "POKEMON_WAS_VOTED",
     payload: pokemon
   }
 }
 
-export {fetchPokemonsWithThunk, changedSearchTerm, postNewPokemonWithThunk, changedSortValue, changedFilterValue, votedForPokemonWithThunk}
+function editPokemonWithThunk(pokemon, name, types) {
+  return dispatch => {
+    fetch(`http://localhost:3000/pokemon/${pokemon.id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        name: name,
+        types: types
+      })
+    }).then(res => res.json())
+      .then(pokemon => {
+        dispatch(editedPokemonWithThunk(pokemon))
+      })
+  }
+}
+
+function editedPokemonWithThunk(pokemon) {
+  return {
+    type: "POKEMON_WAS_EDITED",
+    payload: pokemon
+  }
+}
+
+export {fetchPokemonsWithThunk, changedSearchTerm, postNewPokemonWithThunk, changedSortValue, changedFilterValue, voteForPokemonWithThunk, editPokemonWithThunk}

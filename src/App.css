@@ -28,3 +28,10 @@
   justify-content: center;
   align-items: center;
 }
+
+#pokemon-edit-page {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

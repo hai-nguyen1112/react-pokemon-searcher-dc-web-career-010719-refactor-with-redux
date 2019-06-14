@@ -13,6 +13,14 @@ const pokemonsReducer = (oldState=[], action) => {
         }
         return pokemon
       })
+    case "POKEMON_WAS_EDITED":
+      return oldState.map(pokemon => {
+        if (pokemon.id === action.payload.id) {
+          return action.payload
+        } else {
+          return pokemon
+        }
+      })
     default:
       return oldState
   }

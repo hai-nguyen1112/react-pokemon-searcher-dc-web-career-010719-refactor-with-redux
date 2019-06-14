@@ -3,7 +3,7 @@ import {Dropdown} from 'semantic-ui-react'
 import {connect} from 'react-redux'
 import {changedFilterValue} from '../redux/actions'
 
-const PokemonFilter = ({onFilterChange}) => {
+const PokemonFilter = ({onFilterChange, filterValue}) => {
   let filterOptions = [
     {
       key: 1,
@@ -28,8 +28,9 @@ const PokemonFilter = ({onFilterChange}) => {
   ]
   return (
     <div>
+      Filter:&nbsp;&nbsp;
       <Dropdown
-        placeholder="Filter"
+        placeholder={filterValue.charAt(0).toUpperCase() + filterValue.slice(1)}
         search
         selection
         options={filterOptions}

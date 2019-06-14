@@ -1,7 +1,7 @@
 {
   "pokemon": [
     {
-      "height": 21,
+      "height": 111,
       "weight": 130,
       "id": 2,
       "name": "ivysaur",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "height": 68,
+      "height": 86,
       "weight": 1000,
       "id": 3,
       "name": "venusaur",
@@ -91,7 +91,7 @@
       }
     },
     {
-      "height": 6,
+      "height": 11,
       "weight": 85,
       "id": 5,
       "name": "charmander",
@@ -146,7 +146,7 @@
       }
     },
     {
-      "height": 11,
+      "height": 25,
       "weight": 190,
       "id": 6,
       "name": "charmeleon",
@@ -182,7 +182,8 @@
         }
       ],
       "types": [
-        "fire"
+        "fire",
+        "dragon"
       ],
       "sprites": {
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
@@ -246,7 +247,7 @@
       }
     },
     {
-      "height": 5,
+      "height": 32,
       "weight": 90,
       "id": 10,
       "name": "squirtle",
@@ -3756,7 +3757,7 @@
       }
     },
     {
-      "height": 16,
+      "height": 26,
       "weight": 785,
       "id": 99,
       "name": "slowbro",
@@ -5348,7 +5349,7 @@
       }
     },
     {
-      "height": 19,
+      "height": 28,
       "weight": 1200,
       "id": 140,
       "name": "rhydon",
@@ -6932,7 +6933,7 @@
       }
     },
     {
-      "height": 17,
+      "height": 31,
       "weight": 554,
       "id": 197,
       "name": "articuno",
@@ -7022,7 +7023,7 @@
       }
     },
     {
-      "height": 20,
+      "height": 26,
       "weight": 600,
       "id": 199,
       "name": "moltres",
@@ -7067,7 +7068,7 @@
       }
     },
     {
-      "height": 27,
+      "height": 30,
       "weight": 33,
       "id": 200,
       "name": "dratini",
@@ -7111,7 +7112,7 @@
       }
     },
     {
-      "height": 40,
+      "height": 54,
       "weight": 165,
       "id": 201,
       "name": "dragonair",
@@ -7164,7 +7165,7 @@
       }
     },
     {
-      "height": 22,
+      "height": 26,
       "weight": 2100,
       "id": 202,
       "name": "dragonite",
@@ -7274,7 +7275,7 @@
       }
     },
     {
-      "height": 4,
+      "height": 19,
       "weight": 40,
       "id": 206,
       "name": "mew",
@@ -7359,9 +7360,9 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
       },
-      "height": 27,
+      "height": 46,
       "types": [],
-      "id": 207
+      "id": 1
     }
   ]
 }
