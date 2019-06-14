@@ -302,7 +302,7 @@
       }
     },
     {
-      "height": 13,
+      "height": 18,
       "weight": 225,
       "id": 11,
       "name": "wartortle",
@@ -338,7 +338,8 @@
         }
       ],
       "types": [
-        "water"
+        "water",
+        "normal"
       ],
       "sprites": {
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
@@ -382,7 +383,8 @@
         }
       ],
       "types": [
-        "water"
+        "water",
+        "normal"
       ],
       "sprites": {
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
