@@ -6,6 +6,13 @@ const pokemonsReducer = (oldState=[], action) => {
       return action.payload
     case "NEW_POKEMON_WAS_POSTED":
       return action.payload
+    case "POKEMON_WAS_VOTED":
+      return oldState.map(pokemon => {
+        if (pokemon.id === action.payload.id) {
+          pokemon.height = pokemon.height + 1
+        }
+        return pokemon
+      })
     default:
       return oldState
   }

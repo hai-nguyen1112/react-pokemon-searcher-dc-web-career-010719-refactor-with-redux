@@ -32,12 +32,13 @@ function postNewPokemonWithThunk(pokemons, name, hp, frontUrl, backUrl) {
       },
       body: JSON.stringify({
         name: name,
-        stats: [{}, {}, {}, {}, {}, {value: hp, name: 'hp'}],
+        stats: [{value: 50, name: "special-defense"}, {value: 60, name: "special-attack"}, {value: 70, name: "defense"}, {value: 35, name: "attack"}, {value: 45, name: "speed"}, {value: hp, name: 'hp'}],
         sprites: {
           front: frontUrl,
           back: frontUrl
         },
-        types: ["grass"]
+        height: 5,
+        types: []
       })
     }).then(res => res.json())
       .then(newPokemon => {
@@ -69,4 +70,21 @@ function changedFilterValue(value) {
   }
 }
 
-export {fetchPokemonsWithThunk, changedSearchTerm, postNewPokemonWithThunk, changedSortValue, changedFilterValue}
+function votedForPokemonWithThunk(pokemon) {
+  fetch(`http://localhost:3000/pokemon/${pokemon.id}`, {
+    method: "PATCH",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      height: pokemon.height + 1
+    })
+  })
+  return {
+    type: "POKEMON_WAS_VOTED",
+    payload: pokemon
+  }
+}
+
+export {fetchPokemonsWithThunk, changedSearchTerm, postNewPokemonWithThunk, changedSortValue, changedFilterValue, votedForPokemonWithThunk}

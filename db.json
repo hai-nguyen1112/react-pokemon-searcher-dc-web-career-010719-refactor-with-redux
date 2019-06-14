@@ -1,7 +1,7 @@
 {
   "pokemon": [
     {
-      "height": 10,
+      "height": 21,
       "weight": 130,
       "id": 2,
       "name": "ivysaur",
@@ -46,7 +46,7 @@
       }
     },
     {
-      "height": 20,
+      "height": 68,
       "weight": 1000,
       "id": 3,
       "name": "venusaur",
@@ -301,7 +301,7 @@
       }
     },
     {
-      "height": 10,
+      "height": 13,
       "weight": 225,
       "id": 11,
       "name": "wartortle",
@@ -5461,7 +5461,7 @@
       }
     },
     {
-      "height": 10,
+      "height": 15,
       "weight": 350,
       "id": 145,
       "name": "tangela",
@@ -7067,7 +7067,7 @@
       }
     },
     {
-      "height": 18,
+      "height": 27,
       "weight": 33,
       "id": 200,
       "name": "dratini",
@@ -7330,13 +7330,28 @@
     {
       "name": "bulbasaur",
       "stats": [
-        {},
-        {},
-        {},
-        {},
-        {},
         {
-          "value": "30",
+          "value": 50,
+          "name": "special-defense"
+        },
+        {
+          "value": 60,
+          "name": "special-attack"
+        },
+        {
+          "value": 70,
+          "name": "defense"
+        },
+        {
+          "value": 35,
+          "name": "attack"
+        },
+        {
+          "value": 45,
+          "name": "speed"
+        },
+        {
+          "value": "40",
           "name": "hp"
         }
       ],
@@ -7344,9 +7359,8 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
       },
-      "types": [
-        "grass"
-      ],
+      "height": 27,
+      "types": [],
       "id": 207
     }
   ]
