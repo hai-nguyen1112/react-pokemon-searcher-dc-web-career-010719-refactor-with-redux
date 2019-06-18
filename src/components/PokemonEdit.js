@@ -21,11 +21,11 @@ class PokemonEdit extends Component {
     })
   }
 
-  handleChangeName = (e) => {
+  handleChangeName = e => {
     this.setState({name: e.target.value})
   }
 
-  handleChangeType = (e) => {
+  handleChangeType = e => {
     this.setState({types: e.target.value.split(" ")})
   }
 

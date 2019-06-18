@@ -46,7 +46,7 @@
       }
     },
     {
-      "height": 86,
+      "height": 90,
       "weight": 1000,
       "id": 3,
       "name": "venusaur",
@@ -82,8 +82,7 @@
         }
       ],
       "types": [
-        "grass",
-        "poison"
+        "grass"
       ],
       "sprites": {
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
@@ -91,7 +90,7 @@
       }
     },
     {
-      "height": 11,
+      "height": 20,
       "weight": 85,
       "id": 5,
       "name": "charmander",
@@ -138,7 +137,8 @@
         }
       ],
       "types": [
-        "fire"
+        "fire",
+        "dragon"
       ],
       "sprites": {
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
@@ -347,7 +347,7 @@
       }
     },
     {
-      "height": 16,
+      "height": 36,
       "weight": 855,
       "id": 12,
       "name": "blastoise",
@@ -2505,7 +2505,7 @@
       }
     },
     {
-      "height": 8,
+      "height": 22,
       "weight": 196,
       "id": 71,
       "name": "psyduck",
@@ -5408,7 +5408,7 @@
       }
     },
     {
-      "height": 11,
+      "height": 23,
       "weight": 346,
       "id": 143,
       "name": "chansey",
@@ -6302,7 +6302,7 @@
       }
     },
     {
-      "height": 25,
+      "height": 29,
       "weight": 2200,
       "id": 175,
       "name": "lapras",
@@ -7362,8 +7362,10 @@
         "front": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
         "back": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/1.png"
       },
-      "height": 46,
-      "types": [],
+      "height": 5,
+      "types": [
+        "grass"
+      ],
       "id": 1
     }
   ]

@@ -9,7 +9,7 @@ import PokemonSort from './PokemonSort'
 import PokemonFilter from './PokemonFilter'
 
 class PokemonPage extends React.Component {
-  componentDidMount() {
+  componentWillUnmount() {
     this.props.onSearchTermChange("")
   }
 

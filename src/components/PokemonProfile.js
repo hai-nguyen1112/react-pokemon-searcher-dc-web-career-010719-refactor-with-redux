@@ -3,9 +3,10 @@ import {connect} from 'react-redux'
 import {withRouter, Link} from 'react-router-dom'
 import {Card, Image, Button} from 'semantic-ui-react'
 import {isEmpty} from 'lodash'
-import {voteForPokemonWithThunk} from '../redux/actions'
+import {voteForPokemonWithThunk, deletePokemonWithThunk} from '../redux/actions'
 
-const PokemonProfile = ({pokemon, onVoteForPokemon}) => {
+const PokemonProfile = ({pokemon, onVoteForPokemon, onDeletePokemon, history}) => {
+
   return (
     <div id="pokemon-profile-page">
       {
@@ -36,6 +37,7 @@ const PokemonProfile = ({pokemon, onVoteForPokemon}) => {
             <Link to="/pokemons"><Button>Back</Button></Link>
             <Button onClick={() => onVoteForPokemon(pokemon)}>Vote</Button>
             <Link to={`/pokemons/${pokemon.id}/edit`}><Button>Edit</Button></Link>
+            <Button onClick={() => {onDeletePokemon(pokemon); history.push("/pokemons")}} style={{marginTop: "10px"}}>Delete</Button>
           </Card.Content>
         </Card>
       }
@@ -51,7 +53,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    onVoteForPokemon: pokemon => dispatch(voteForPokemonWithThunk(pokemon))
+    onVoteForPokemon: pokemon => dispatch(voteForPokemonWithThunk(pokemon)),
+    onDeletePokemon: pokemon => dispatch(deletePokemonWithThunk(pokemon))
   }
 }
 

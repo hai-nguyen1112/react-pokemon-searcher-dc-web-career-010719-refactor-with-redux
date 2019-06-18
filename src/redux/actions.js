@@ -121,4 +121,23 @@ function editedPokemonWithThunk(pokemon) {
   }
 }
 
-export {fetchPokemonsWithThunk, changedSearchTerm, postNewPokemonWithThunk, changedSortValue, changedFilterValue, voteForPokemonWithThunk, editPokemonWithThunk}
+function deletePokemonWithThunk(pokemon) {
+  return dispatch => {
+    fetch(`http://localhost:3000/pokemon/${pokemon.id}`, {
+      method: "DELETE",
+      headers: {
+        "Content_Type": "application/json",
+        "Accept": "application/json"
+      }
+    }).then(() => dispatch(deletedPokemonWithThunk(pokemon)))
+  }
+}
+
+function deletedPokemonWithThunk(pokemon) {
+  return {
+    type: "POKEMON_WAS_DELETED",
+    payload: pokemon
+  }
+}
+
+export {fetchPokemonsWithThunk, changedSearchTerm, postNewPokemonWithThunk, changedSortValue, changedFilterValue, voteForPokemonWithThunk, editPokemonWithThunk, deletePokemonWithThunk}

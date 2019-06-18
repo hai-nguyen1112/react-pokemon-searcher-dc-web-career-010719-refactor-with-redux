@@ -21,6 +21,8 @@ const pokemonsReducer = (oldState=[], action) => {
           return pokemon
         }
       })
+    case "POKEMON_WAS_DELETED":
+      return oldState.filter(pokemon => pokemon.id !== action.payload.id)
     default:
       return oldState
   }
